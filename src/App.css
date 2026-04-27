@@ -1,0 +1,19 @@
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.token-print-area {
+  display: none; /* Screen par nazar nahi ayega, sirf print mein ayega */
+}
+
+@media print {
+  body * { visibility: hidden; }
+  .token-print-area, .token-print-area * { visibility: visible; }
+  .token-print-area { position: absolute; left: 0; top: 0; display: block; }
+}
