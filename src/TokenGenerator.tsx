@@ -18,10 +18,10 @@ const TokenGenerator: React.FC = () => {
     try {
       // FIX: Added 'const response =' to capture data from backend
       const response = await axios.post("https://saylai-token.vercel.app/api/tokens", {
-        type,
-        reason: type === 'One Window' ? reason : 'N/A',
-        cnicOrFile: type === 'Final' ? cnicOrFile : 'N/A',
-      });
+  type,
+  reason: type === 'One Window' ? reason : 'N/A',
+  cnicOrFile: type === 'Final' ? cnicOrFile : 'N/A',
+});
       
       setTokenInfo(response.data);
       setStep(3);
